@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Test mario | float left</title>
+    <style>
+        section{
+            width: 250px;
+            height: 100px;
+            border: 1px solid #333;
+        }
+        section .mario,
+        section .cactus {
+            width: 48px;
+            height: 48px;
+            float: right;;
+            border:1px solid darkgreen;
+            margin-top: 50px;
+        }
+        section .mario {
+            background-image: url(images/mario.png);
+            background-size: 48px;
+            }
+            section .cactus {
+            background-image: url(images/cactus.png);
+            background-size: 48px;
+            }  
+       
+        /*
+        a) sunt date caracteristice a divurilor cu clasele 
+        class=mario si class=cactus
+        - latmea si inaltimea la fiecare in parte de 48px;
+        - deplasarea in interiorul container de tip - section in partea stinga;
+        - sunt date chenare de un pixel de tip solid (linie continue) de culoare verde-inchis;
+        -marginea de sus a divurilor (mario si cactus) de 50px plasata fata de container - section.
+        b) float-left - reprezinta deplasarea in partea stinga in acest exemplu a divurilor cu classa (mario si cactus),
+        daca ar fi float-right, atunci s-ar deplasa in partea dreapta si ar margini partea dreapta a containerului- section.
+        c) margin-top - reprezinta marginea de sus a unui element,
+        in caz de valoare negativa elementele s-ar deplasa inafara containerului-section.
+        d) patratele din interiorul containerului-section au marimea de 50px pe 50px (marginele[1px+1px] si div-ul [48px])
+        */
+        section .mario,
+        section .cactus {
+            width: 48px;
+            height: 48px;
+            float:left;
+            border:1px solid darkgreen;
+            margin-top: 50px;
+        }
+        section .mario{
+            background-image: url(/images/mario.png);
+            background-size: 48px;
+        }
+        section .cactus{
+            background-image: url(images/cactus.png);
+            background-size: 48px;
+        }
+        /* se deplaseaza cu mario, deoarece este tras ca un magnet din cauza float-left */
+       #episode-2 .mario {
+           margin-top: 0px;
+           margin-left: 50px;
+       }
+       #episode-2 .cactus {
+           margin-left: -50px;
+       }
+       #episode-3 .mario {
+           margin-top: 50px;
+           margin-left: 100px;
+       }
+       #episode-3 .cactus {
+        margin-left: -100px;
+        margin-top: 50px;
+       }
+       #episode-4 .mario {
+           margin-top: 50px;
+           margin-left: 150px;
+       }
+       #episode-4 .cactus {
+        margin-left: -150px;
+        margin-top: 50px;
+       }
+       #episode-5 .mario {
+           margin-top: 50px;
+           margin-left: 200px;
+       }
+       #episode-5 .cactus {
+        margin-left: -200px;
+        margin-top: 50px;
+       }
+    </style>
+</head>
+<body>
+    <h2>Episode-1</h2>
+    <section id="episode-1">
+        <div class="mario"></div>
+        <div class="cactus"></div>
+    </section>
+
+    <h2>Episode-2</h2>
+    <section id="episode-2">
+        <div class="mario"></div>
+        <div class="cactus"></div>
+    </section>
+
+    <h2>Episode-3</h2>
+    <section id="episode-3">
+        <div class="mario"></div>
+        <div class="cactus"></div>
+    </section>
+
+    <h2>Episode-4</h2>
+    <section id="episode-4">
+        <div class="mario"></div>
+        <div class="cactus"></div>
+    </section>
+
+    <h2>Episode-5</h2>
+    <section id="episode-5">
+        <div class="mario"></div>
+        <div class="cactus"></div>
+    </section>  
+
+</body>
+</html>
